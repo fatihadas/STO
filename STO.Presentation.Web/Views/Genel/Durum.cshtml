@@ -1,0 +1,88 @@
+﻿@model STO.Data.Model.OtherModels.DurumModel
+
+@{
+    ViewBag.Title = "Durum";
+    Layout = "~/Views/layouts/dashboard_layout.cshtml";
+}
+
+
+<section class="content-header">
+    <h1>
+        Genel Durum
+        <small>Sistem Özeti</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li class="active"> Genel Durum</li>
+    </ol>
+</section>
+<section class="content">
+
+    <div class="row">
+
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3>@Model.UrunSayisi</h3>
+                    <p>Ürün Sayısı</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+
+                </div>
+                <a href="/Urun/Liste" class="small-box-footer">Ayrıntılar<i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3>@Model.MüsteriSayisi</h3>
+                    <p>Müşteri Sayısı</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-person"></i>
+
+                </div>
+                <a href="/Musteri/Liste" class="small-box-footer">Ayrıntılar <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3>@Model.SiparisSayisi</h3>
+                    <p>Sipariş Sayısı</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="/Siparis/Liste" class="small-box-footer">Ayrıntılar<i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3>@Model.KargoluSiparisSayisi</h3>
+                    <p>Kargolanan Sipariş</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="/Siparis/Liste" class="small-box-footer">Ayrıntılar <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+
+    </div>
+
+
+</section>
+
