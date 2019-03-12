@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Kullanici.cs" />
     <Compile Include="Musteri.cs" />
-    <Compile Include="OtherModels\DurumModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sehir.cs" />
     <Compile Include="Sipari.cs" />

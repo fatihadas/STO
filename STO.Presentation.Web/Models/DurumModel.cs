@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace STO.Data.Model.OtherModels
+namespace STO.Presentation.Web.Models
 {
     public class DurumModel
     {
@@ -14,5 +13,4 @@ namespace STO.Data.Model.OtherModels
         public int KargoluSiparisSayisi { get; set; }
 
     }
-
 }

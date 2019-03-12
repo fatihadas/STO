@@ -1,5 +1,6 @@
-﻿using STO.Data.Context;
-using STO.Data.UnitOfWork;
+﻿using STO.Business.UnitOfWork;
+//using STO.Data.Context;
+//using STO.Data.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace STO.Presentation.Web.Controllers
 {
     public class BaseController : Controller
     {
-        protected static SiparisContext _dbContext = new SiparisContext();
-        protected IUnitOfWork _uow = new EFUnitOfWork(_dbContext);
-        
+        //protected static SiparisContext _dbContext = new SiparisContext();
+        protected IUnitOfWork _uow = new EFUnitOfWork();//_dbContext
+
     }
 }

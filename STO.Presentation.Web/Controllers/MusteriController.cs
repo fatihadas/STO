@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using STO.Presentation.Web.data;
-using STO.Data.Context;
-using STO.Data.UnitOfWork;
+//using STO.Data.Context;
+//using STO.Data.UnitOfWork;
 using STO.Data.Model;
-using STO.Data.Repositories;
+//using STO.Data.Repositories;
 using STO.Presentation.Web.Models;
 
 namespace STO.Presentation.Web.Controllers

@@ -1,13 +1,15 @@
-﻿using System;
-using System.Linq;
+﻿using STO.Data.Context;
+using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Linq;
 using System.Linq.Expressions;
-using STO.Data.Context;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace STO.Data.Repositories
+namespace STO.Business.Repositories
 {
-
     /// <typeparam name="T"></typeparam>
     public class EFRepository<T> : IRepository<T> where T : class
     {

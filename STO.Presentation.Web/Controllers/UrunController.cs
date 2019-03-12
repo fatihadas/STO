@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using STO.Data.UnitOfWork;
+//using STO.Data.UnitOfWork;
 using STO.Data.Model;
-using STO.Data.Repositories;
+//using STO.Data.Repositories;
 using STO.Presentation.Web.Models;
-using STO.Data.Context;
+//using STO.Data.Context;
 
 namespace STO.Presentation.Web.Controllers
 {

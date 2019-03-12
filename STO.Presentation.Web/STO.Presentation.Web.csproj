@@ -141,6 +141,7 @@
     <Compile Include="Controllers\SiparisController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="data\ControlLogin.cs" />
+    <Compile Include="Models\DurumModel.cs" />
     <Compile Include="Models\SiparisYeni.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,13 +171,13 @@
     <Folder Include="Content\ProfilResimleri\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\STO.Business\STO.Business.csproj">
+      <Project>{4c0bb5ad-9c14-43cc-af60-a0ca36d02f13}</Project>
+      <Name>STO.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\STO.Data.Model\STO.Data.Model.csproj">
       <Project>{878de77a-3001-454a-b9bd-a16f0807afa0}</Project>
       <Name>STO.Data.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\STO.Data\STO.Data.csproj">
-      <Project>{bfe75cbc-4112-48d6-8b02-ba6636e1b84d}</Project>
-      <Name>STO.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

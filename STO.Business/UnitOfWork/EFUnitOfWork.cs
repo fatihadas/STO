@@ -1,6 +1,5 @@
-﻿using STO.Data.Context;
-using STO.Data.Model;
-using STO.Data.Repositories;
+﻿using STO.Business.Repositories;
+using STO.Data.Context;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,19 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace STO.Data.UnitOfWork
+namespace STO.Business.UnitOfWork
 {
-
     public class EFUnitOfWork : IUnitOfWork
     {
         private readonly SiparisContext _dbContext;
 
-        public EFUnitOfWork(SiparisContext dbContext)
+        public EFUnitOfWork()
         {
+            Database.SetInitializer<SiparisContext>(null);
+            _dbContext = new SiparisContext();
+        }
+
+        public EFUnitOfWork(SiparisContext dbContext)
+        {//
             Database.SetInitializer<SiparisContext>(null);
 
             if (dbContext == null)
+            {
                 throw new ArgumentNullException("dbContext can not be null.");
+            }
 
             _dbContext = dbContext;
 
@@ -53,6 +59,7 @@ namespace STO.Data.UnitOfWork
             //return _dbContext.SaveChanges();
             //new usage
             //_dbContext.Database.Connection.Open();
+            
             using (var transaction = _dbContext.Database.BeginTransaction())
             {
                 try
@@ -67,7 +74,7 @@ namespace STO.Data.UnitOfWork
                     throw;
                 }
             }
-            
+
 
         }
         #endregion

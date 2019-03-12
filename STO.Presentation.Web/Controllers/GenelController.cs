@@ -1,9 +1,9 @@
-﻿using STO.Data.Context;
+﻿//using STO.Data.Context;
 using STO.Data.Model;
-using STO.Data.Model.OtherModels;
-using STO.Data.Repositories;
-using STO.Data.UnitOfWork;
+//using STO.Data.Repositories;
+//using STO.Data.UnitOfWork;
 using STO.Presentation.Web.data;
+using STO.Presentation.Web.Models;
 using System;
 using System.Linq;
 using System.Web;

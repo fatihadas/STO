@@ -1,7 +1,8 @@
-﻿using STO.Data.Context;
+﻿//using STO.Data.Context;
+//using STO.Data.Model;
+//using STO.Data.Repositories;
+//using STO.Data.UnitOfWork;
 using STO.Data.Model;
-using STO.Data.Repositories;
-using STO.Data.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
