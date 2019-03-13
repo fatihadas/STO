@@ -12,7 +12,8 @@ namespace STO.Presentation.Web.Controllers
     public class BaseController : Controller
     {
         //protected static SiparisContext _dbContext = new SiparisContext();
-        protected IUnitOfWork _uow = new EFUnitOfWork();//_dbContext
+
+        //protected IUnitOfWork _uow = new EFUnitOfWork();//_dbContext
 
     }
 }

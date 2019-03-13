@@ -9,13 +9,21 @@ using STO.Presentation.Web.data;
 using STO.Data.Model;
 //using STO.Data.Repositories;
 using STO.Presentation.Web.Models;
+using STO.Business.UnitOfWork;
 
 namespace STO.Presentation.Web.Controllers
 {
 
     [ControlLogin]
-    public class MusteriController : BaseController
+    public class MusteriController : Controller
     {
+        private readonly IUnitOfWork _uow;
+
+        public MusteriController(IUnitOfWork uow)
+        {
+            _uow = uow;
+        }
+
         public ActionResult Yeni()
         {
             return View(GetModel());

@@ -2,6 +2,7 @@
 //using STO.Data.Model;
 //using STO.Data.Repositories;
 //using STO.Data.UnitOfWork;
+using STO.Business.UnitOfWork;
 using STO.Data.Model;
 using System;
 using System.Collections.Generic;
@@ -11,17 +12,17 @@ using System.Web.Mvc;
 
 namespace STO.Presentation.Web.Controllers
 {
-    public class GirisController : BaseController
+    public class GirisController : Controller
     {
-        public ActionResult Islem()
-        {
-            if (HttpContext.Session["KullaniciId"] != null)
-            {
-                return RedirectToAction("Durum", "Genel");
-            }
+        //IUnitOfWork
 
-            return View();
+        private readonly IUnitOfWork _uow;
+
+        public GirisController(IUnitOfWork uow)
+        {
+            _uow = uow;
         }
+
 
         [HttpPost]
         public ActionResult Islem(string username, string password)

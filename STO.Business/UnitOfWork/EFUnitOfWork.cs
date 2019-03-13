@@ -13,11 +13,11 @@ namespace STO.Business.UnitOfWork
     {
         private readonly SiparisContext _dbContext;
 
-        public EFUnitOfWork()
-        {
-            Database.SetInitializer<SiparisContext>(null);
-            _dbContext = new SiparisContext();
-        }
+        //public EFUnitOfWork()
+        //{
+        //    Database.SetInitializer<SiparisContext>(null);
+        //    _dbContext = new SiparisContext();
+        //}
 
         public EFUnitOfWork(SiparisContext dbContext)
         {//

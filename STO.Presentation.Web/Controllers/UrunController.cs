@@ -8,13 +8,20 @@ using System.Web.Mvc;
 using STO.Data.Model;
 //using STO.Data.Repositories;
 using STO.Presentation.Web.Models;
+using STO.Business.UnitOfWork;
 //using STO.Data.Context;
 
 namespace STO.Presentation.Web.Controllers
 {
     [ControlLogin]
-    public class UrunController : BaseController
+    public class UrunController : Controller
     {
+        private readonly IUnitOfWork _uow;
+
+        public UrunController(IUnitOfWork uow)
+        {
+            _uow = uow;
+        }
         public ActionResult Ekle()
         {
             return RedirectToAction("Yeni", "Urun");

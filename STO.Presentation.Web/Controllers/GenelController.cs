@@ -1,4 +1,5 @@
 ﻿//using STO.Data.Context;
+using STO.Business.UnitOfWork;
 using STO.Data.Model;
 //using STO.Data.Repositories;
 //using STO.Data.UnitOfWork;
@@ -12,8 +13,15 @@ using System.Web.Mvc;
 namespace STO.Presentation.Web.Controllers
 {
     [ControlLogin]
-    public class GenelController : BaseController
+    public class GenelController : Controller
     {
+        private readonly IUnitOfWork _uow;
+
+        public GenelController(IUnitOfWork uow)
+        {
+            _uow = uow;
+        }
+
         public ActionResult Durum()
         {
             return View(GetDurumModel());
